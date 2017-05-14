@@ -7,7 +7,6 @@ module Api::ErrorHandling
           @error = exception
           @status = status
           @error_code = args[1][:error_code]
-          @error = Exception.new('Something went wrong! Please try again later!') if @error_code == Api::Error::CODES[:unknown]
           render 'api/v1/base/error'
         end
       end

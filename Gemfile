@@ -44,6 +44,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'bind'
   gem 'faker'
+  gem "factory_girl_rails"
 end
 
 group :development do
@@ -84,3 +85,5 @@ gem 'cancancan', '~> 1.10'
 gem 'rollbar'
 gem 'puma'
 gem 'slim-rails'
+gem 'sentry-raven'
+gem 'newrelic_rpm'

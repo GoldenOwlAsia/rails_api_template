@@ -19,8 +19,11 @@ module Api::Error
   end
 
   module API
-    module Common
+    module Base
       class Unknown < Api::Error::Base; end
+      class CreateFailed < Api::Error::Base; end
+      class UpdateFailed < Api::Error::Base; end
+      class DeleteFailed < Api::Error::Base; end
     end
     module Login
       class AuthenticationFailed < Api::Error::Base; end

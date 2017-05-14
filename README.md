@@ -15,6 +15,8 @@ Configuration
 
 `cp .env.sample .env`
 
+- Setup rollbar ENV key.
+
 `cp config/database.yml.sample config/database.yml`
 
 Database creation
@@ -37,4 +39,20 @@ Run test API
 
 * Run `rails s` to start server
 * Use Postman or request the api in browser.
-* `localhost:3000/api/v1/users?auth_token=<USER_AUTH_TOKEN>`
+* Note: all request must have params `auth_token`
+
+1/ [GET] list users
+* `localhost:3000/api/v1/users`
+
+2/ [GET] show users
+* `localhost:3000/api/v1/users/1`
+
+3/ [POST] create a user
+* `localhost:3000/api/v1/users?user[email]=<email>&user[password]=<password>`
+
+4/ [PUT] update a user
+* `localhost:3000/api/v1/users/1?user[email]=<email>&user[password]=<password>`
+
+5/ [DELETE] a user
+* `localhost:3000/api/v1/users/1`
+
