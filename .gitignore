@@ -22,3 +22,4 @@ config/database.yml
 /coverage
 # Ignore Mac OS file
 .DS_Store
+.ruby-version
