@@ -24,8 +24,10 @@
 #  updated_at             :datetime         not null
 #
 
-class User < ApplicationRecord
+class User < ActiveRecord::Base
+  include Tokenable
   rolify
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
